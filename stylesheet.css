@@ -63,4 +63,7 @@ p{
   .imagem{
     zoom:0.8;
   }
+  .esquerda{
+    margin-top: 16px;
+  }
 }
