@@ -17,18 +17,62 @@ h1{
   line-height: 72px;
 }
 p{
+  font-size: 16px;
+  line-height: 160%;
+}
+.texto-maior{
   font-size: 20px;
   line-height: 160%;
   padding-right: 40px;
   max-width: 650px;
 }
-.legenda{
+.destaque{
   font-size: 16px;
-  line-height: 160%;
-  font-style: italic;
+  line-height: 60%;
+  margin-top: 60px;
+  font-weight: 800;
 }
 .imagem{
     height: auto;
+}
+.logo{
+  position: fixed;
+  top: 16px;
+}
+.form{
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: #313131;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 16px Montserrat;
+    padding: 20px 20px;
+    border-width: 1px;
+    border-color: #F6F6F6;
+    width: 392px;
+}
+.botao{
+  width: 212px;
+  padding: 16px 16px;
+  font: 800 16px Montserrat;
+  border:1px;
+  border-color: #FF9100;
+  background-color: #FF9100;
+  color: white;
+  height: 62px;
+}
+.formularios{
+  display: flex;
 }
 
 @media (max-width: 1240px){
@@ -38,9 +82,26 @@ p{
     text-align: center;
     flex-direction: column-reverse;
   }
-  p{
+  .logo{
+    position: initial;
+    margin-top: 16px;
+  }
+  .texto-maior{
     padding-right: 0;
     max-width: 100%;
+  }
+  .formularios{
+    display: block;
+  }
+  .form{
+    width: 100%;
+  }
+  .botao{
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .destaque{
+    line-height: 160%;
   }
 }
 
@@ -50,7 +111,7 @@ p{
     background-position: top;
     background-repeat: repeat;
   }
-  p{
+  .texto-maior{
     font-size: 16px;
     line-height: 200%;
   }
