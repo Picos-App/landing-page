@@ -12,7 +12,8 @@
           type:'post',
           data:$("#myForm").serializeArray(),
           success: function(){
-            alert("Obrigado por assinar nossa newsletter :)")
+            alert("Obrigado por assinar nossa newsletter :)");
+            document.querySelector("#myForm").reset()
           },
           error: function(){
             alert("Aconteceu um erro, tente novamente")
