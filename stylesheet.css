@@ -3,6 +3,8 @@ body{
   color: #313131;
   margin: auto;
   max-width: 1240px;
+}
+.hero{
   display: flex;
   justify-content: space-between;
   align-items:center;
@@ -10,6 +12,8 @@ body{
   background-color: #FBFBFB;
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 h1{
   font-weight: 300;
@@ -74,13 +78,21 @@ p{
 .formularios{
   display: flex;
 }
+.iframe-desk{
+  display: block;
+}
+.iframe-mob{
+  display: none;
+}
 
 @media (max-width: 1240px){
-  body{
-    max-width: 80%;
+  .hero{
+    max-width: 90%;
     display: block;
     text-align: center;
     flex-direction: column-reverse;
+    margin: auto;
+    margin-bottom: 32px;
   }
   .logo{
     position: initial;
@@ -122,9 +134,16 @@ p{
     margin-top: 60px;
   }
   .imagem{
-    zoom:0.8;
+    display: none;
   }
   .esquerda{
     margin-top: 16px;
   }
+  .iframe-desk{
+  display: none;
+}
+.iframe-mob{
+  display: block;
+  margin: auto;
+}
 }
