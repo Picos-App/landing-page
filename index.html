@@ -23,19 +23,35 @@
   </script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <meta charset="utf-8">
-  <meta id="viewport" name="viewport" content ="width=device-width" />
+  <meta id="viewport" name="viewport" content="width=device-width" />
   <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
   <title>Picos</title>
   <meta name="description" content="Picos">
   <meta name="Picos" content="SitePoint">
 </head>
 <body>
-	<img src="img/logo.svg" class="logo">
-	<section class="hero">
+	<section class="menu">
+		<div class="container-menu">
+			<img src="img/logo.png" class="logo">
+			<div class="links">
+				<a href="#inicio"><p class="link">início</p></a>
+				<a href="#sobre"><p class="link">Sobre</p></a>
+				<a href="#enviar"><p class="link">Enviar pico</p></a>
+				<a href="#contato"><p class="link">Contato</p></a>
+			</div>
+			<div class="redes">
+				<a href="https://www.instagram.com/picos.app/" target="blank"><img src="img/instagram.png" class="rede-menu"></a>
+				<a href="https://www.youtube.com/channel/UC0cCQzVfqjqPJ7XsxANbs2Q" target="blank"><img src="img/youtube.png" class="rede-menu"></a>
+				<a href="https://discord.gg/HAT86fh6" target="blank"><img src="img/discord.png" class="rede-menu rede-menu-ultimo"></a>
+			</div>
+		</div>
+	</section>
+  <iframe src="https://www.google.com/maps/d/embed?mid=1YNobQu_UQ2xsVcRZq9dH8XKB5sas3NBZ" class="iframe-desk" width="99.5%" height="100%" id="inicio"></iframe>
+  <section class="hero" id="sobre">
 	  <div class="esquerda">
 	    <h1>Seu guia digital de picos</h1>
-	    <p class="texto-maior"> Picos é o aplicativo que mapeia os picos de rua e pistas de skate das cidades. Veja no mapa os picos disponíveis com informações relevantes sobre eles.</p>
-	    <p class="destaque"> Insira seu e-mail para receber novidades sobre o aplicativo.</p>
+	    <p class="texto-maior"> Picos é o aplicativo que mapeia os picos de rua e pistas de skate das cidades. Veja no mapa os picos disponíveis com informações relevantes.</p>
+	    <p class="destaque"> Insira seu e-mail para receber novidades sobre a plataforma.</p>
 	    <section class="formularios">
 	      <form id="myForm">
 	        <input name="email" placeholder="Seu e-mail" class="form">
@@ -43,9 +59,67 @@
 	      <button onclick="SubForm()" class="botao">Enviar</button>
 	    </section>
 	  </div>
-  	<img src="img/imagem.png" class="imagem">
   </section>
-  <iframe src="https://www.google.com/maps/d/embed?mid=1YNobQu_UQ2xsVcRZq9dH8XKB5sas3NBZ" class="iframe-desk" width="100%" height="100%"></iframe>
-  <iframe src="https://www.google.com/maps/d/embed?mid=1YNobQu_UQ2xsVcRZq9dH8XKB5sas3NBZ" class="iframe-mob" width="90%" height="80%"></iframe>
+  <section class="adicionarpicos" id="enviar">
+  	<img src="img/imagempicos.png" class="imagem-picos">
+  	<h2 class="titulo-adc"> Quer enviar um pico para gente?</h2>
+  	<p class="chamada-adc">Sentiu que o pico que você gosta não está aqui? Faça o cadastro dele agora mesmo!</p>
+  	<a href="https://docs.google.com/forms/d/e/1FAIpQLSeTs6VZAFTfm51lE-lex6VVGHiIvb-R4IPqAzoNy5d13_xNTA/viewform?usp=sf_link" class="btn-round" target="blank">
+  	<img src="img/add.png" class="material-icon">
+  	<p class="botao-texto"> Adicionar pico</p>
+  </a>
+  </section>
+  <section class="contato" id="contato">
+  	<div class="formulario-contato">
+	  	<h2 class="fale"> Fale conosco</h2>
+	  	<p class="fale-text">Gostou da plataforma? Tem críticas? Quer ficar por dentro de tudo da plataforma? Entre no nosso servidor do Discord</p>
+	  	<a href="https://discord.gg/HAT86fh6" class="btn-round btn-discord" target="blank">
+	  		<img src="img/discord.png" class="material-icon">
+	  		<p class="botao-texto"> Entrar no servidor</p>
+	  	</a>
+  	</div>
+  	<img src="img/contato-img.png" class="imagem-contato">
+  </section>
+  <footer>
+  	<img src="img/logo.png" class="logo-footer">
+  	<div class="redes redes-footer">
+		<a href="https://www.instagram.com/picos.app/" target="blank"><img src="img/instagram.png" class="rede-menu rede-footer"></a>
+		<a href="https://www.youtube.com/channel/UC0cCQzVfqjqPJ7XsxANbs2Q" target="blank"><img src="img/youtube.png" class="rede-menu rede-footer"></a>
+		<a href="https://discord.gg/HAT86fh6" target="blank"><img src="img/discord.png" class="rede-menu rede-menu-ultimo rede-footer"></a>
+	</div>
+  </footer>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeTs6VZAFTfm51lE-lex6VVGHiIvb-R4IPqAzoNy5d13_xNTA/viewform?usp=sf_link" class="fab fab-fixo" target="blank">
+  	<img src="img/add.png" class="material-icon">
+  	<p class="botao-texto"> Adicionar pico</p>
+  </a>
 </body>
 </html>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
